@@ -6,8 +6,8 @@ public class SubstanceCellRenderer extends JLabel implements ListCellRenderer<Su
         setOpaque(true);
     }
     @Override
-    public Component getListCellRendererComponent(JList<? extends Substance> list, Substance value, int index, boolean isSelected, boolean cellHasFocus) {
-        setText(value.getName() + " - Density: " + value.getDensity() + " - ChemicalSymbol: " + value.getChemicalSymbol());
+    public Component getListCellRendererComponent(JList<? extends Substance> list, Substance substance, int index, boolean isSelected, boolean cellHasFocus) {
+        setText(substance.getName() + " - Density: " + substance.getDensity() + " - ChemicalSymbol: " + substance.getChemicalSymbol());
         setBackground(isSelected ? list.getSelectionBackground() : list.getBackground());
         setForeground(isSelected ? list.getSelectionForeground() : list.getForeground());
         return this;
